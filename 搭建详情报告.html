@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUNIN 搭建详情报告</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  background: #0d1117;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 80px 60px;
+  text-align: center;
+  border-bottom: 3px solid #D4A574;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #D4A574;
+  color: #0d1117;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 56px;
+  color: #D4A574;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.header .subtitle {
+  font-size: 20px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.header .desc-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(212,165,116,0.1);
+  border: 1px solid rgba(212,165,116,0.3);
+  border-radius: 16px;
+  padding: 24px 36px;
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.img-slide {
+  padding: 60px;
+  background: #0d1117;
+}
+
+.img-slide:nth-child(even) {
+  background: #161b22;
+}
+
+.img-slide .img-num {
+  font-size: 13px;
+  color: #D4A574;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.img-card {
+  background: #161b22;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.img-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.img-caption {
+  padding: 20px 24px;
+  background: #1c2128;
+}
+
+.img-caption h3 {
+  font-size: 18px;
+  color: #D4A574;
+  margin-bottom: 8px;
+}
+
+.img-caption p {
+  font-size: 14px;
+  color: #8b949e;
+  line-height: 1.6;
+}
+
+.footer {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 60px;
+  text-align: center;
+  border-top: 3px solid #D4A574;
+}
+
+.footer h2 {
+  font-size: 36px;
+  color: #D4A574;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 18px;
+  color: #888;
+  line-height: 1.8;
+}
+
+.dot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.dot-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 24px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  border-left: 3px solid #D4A574;
+}
+
+.dot-item .num {
+  font-size: 24px;
+  font-weight: 700;
+  color: #D4A574;
+  min-width: 40px;
+}
+
+.dot-item .text {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.big-img-slide {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-img-slide .big-num {
+  font-size: 13px;
+  color: #D4A574;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  align-self: flex-start;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.big-img-card {
+  max-width: 1400px;
+  width: 100%;
+  background: #161b22;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.big-img-card img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+  background: #0d1117;
+}
+
+.big-img-card .img-caption {
+  padding: 24px 30px;
+  background: #1c2128;
+}
+
+.big-img-card .img-caption h3 {
+  font-size: 20px;
+  color: #D4A574;
+  margin-bottom: 10px;
+}
+
+.big-img-card .img-caption p {
+  font-size: 15px;
+  color: #8b949e;
+  line-height: 1.7;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.progress-dot {
+  width: 60px;
+  height: 4px;
+  background: rgba(212,165,116,0.2);
+  border-radius: 2px;
+}
+
+.progress-dot.active {
+  background: #D4A574;
+}
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Header -->
+<div class="slide header">
+  <div class="section-tag">OUNIN 独立站</div>
+  <h1>搭建详情报告</h1>
+  <p class="subtitle">Independent Website Construction Report</p>
+  <div class="desc-box">
+    完成支付系统搭建、收款页面搭建建设以及跳转。<br>
+    后续将继续优化页面的设计。
+  </div>
+</div>
+
+<!-- Slide 2: Images 1-2 -->
+<div class="slide img-slide">
+  <div class="img-num">— 01 / 06 —</div>
+  <div class="img-grid">
+    <div class="img-card">
+      <img src="reports/build_b94bf96e.png" alt="产品列表页">
+      <div class="img-caption">
+        <h3>OUNIN 首页产品展示</h3>
+        <p>4款核心产品展示：Steam Combi Oven 18in ($250)、Steam Air Fry Oven 12L ($250)、Steam Combi Oven 24in ($309)、Air Fryer Oven 12in ($150)。清晰的定价策略，原价/折扣价对比，促销标签（BESTSELLER、NEW、POPULAR）提升转化。</p>
+      </div>
+    </div>
+    <div class="img-card">
+      <img src="reports/build_d93e821f.png" alt="产品详情页">
+      <div class="img-caption">
+        <h3>Ounin Pro Embedded 详情页</h3>
+        <p>产品详情页完整展示 $149 起售价，包含 Add to Cart 按钮和 PayPal 支付按钮。配备数量选择器、中文产品描述（75升容量 · 12种烹饪模式）。邮件订阅区域已配置。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3: Images 3-4 -->
+<div class="slide img-slide">
+  <div class="img-num">— 02 / 06 —</div>
+  <div class="img-grid">
+    <div class="img-card">
+      <img src="reports/build_c41a413d.png" alt="购物车侧边栏">
+      <div class="img-caption">
+        <h3>购物车侧边栏</h3>
+        <p>用户点击购物车后，右侧滑出购物车抽屉，显示已选商品（Ounin Pro Embedded × 2），总价 $298 USD。包含 Discount 折扣区、运费提示、Checkout 和 PayPal 双按钮。</p>
+      </div>
+    </div>
+    <div class="img-card">
+      <img src="reports/build_f4568717.png" alt="结账页面">
+      <div class="img-caption">
+        <h3>Shopify 结账页面</h3>
+        <p>store.ouninshop.com/checkouts/... 完整 Shopify 结账流程。支持 Email 登录、配送地址填写（美国）、运输方式选择。右侧订单摘要显示商品图片、名称、数量及总价 $149.00 USD。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 4: Image 5 - big -->
+<div class="slide big-img-slide">
+  <div class="big-num">— 03 / 06 —</div>
+  <div class="big-img-card">
+    <img src="reports/build_4ccf80df.png" alt="OUNIN 首页">
+    <div class="img-caption">
+      <h3>OUNIN 品牌首页 — store.ouninshop.com</h3>
+      <p>完整的品牌首页横幅（Hero Banner），标语 "Browse our latest products"。顶部导航集成 Home 和 Catalog 链接，购物车显示数量为 2。底部邮件订阅区域就位，为后续 EDM 营销做好准备。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5: Image 6 - big -->
+<div class="slide big-img-slide">
+  <div class="big-num">— 04 / 06 —</div>
+  <div class="big-img-card">
+    <img src="reports/build_68520a50.png" alt="产品目录页">
+    <div class="img-caption">
+      <h3>产品目录页 — store.ouninshop.com/collections/all</h3>
+      <p>Shopify 产品集合页面，支持 Availability 和 Price 筛选，Sort 排序功能。页面显示单件商品 Ounin Pro Embedded，价格 $149.00。Powered by Shopify 底部版权信息合规展示。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 6: Summary -->
+<div class="slide footer">
+  <h2>✅ 搭建完成项</h2>
+  <div class="dot-list">
+    <div class="dot-item">
+      <div class="num">01</div>
+      <div class="text">完成 Shopify Headless 模式接入，store.ouninshop.com 域名已解析并运行</div>
+    </div>
+    <div class="dot-item">
+      <div class="num">02</div>
+      <div class="text">完成支付系统搭建 — PayPal 按钮、Checkout 跳转均已打通</div>
+    </div>
+    <div class="dot-item">
+      <div class="num">03</div>
+      <div class="text">完成收款页面搭建 — 结账流程完整，用户可顺畅完成下单付款</div>
+    </div>
+    <div class="dot-item">
+      <div class="num">04</div>
+      <div class="text">完成页面跳转建设 — 产品页→购物车→结账，全链路贯通</div>
+    </div>
+  </div>
+  <p style="margin-top:50px;font-size:16px;color:#555;">后续将继续优化页面的设计，提升用户体验与转化率</p>
+</div>
+
+</body>
+</html>
