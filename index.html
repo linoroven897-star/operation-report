@@ -6,288 +6,66 @@
 <title>OUNIN 运营工作完整报告</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
-  background: #0d1117;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-.slide {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.section-tag {
-  display: inline-block;
-  background: #D4A574;
-  color: #0d1117;
-  padding: 6px 20px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
+body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; background: #0d1117; color: #fff; overflow-x: hidden; }
+.slide { width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.section-tag { display: inline-block; background: #D4A574; color: #0d1117; padding: 6px 20px; border-radius: 20px; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
 h1 { font-size: 52px; color: #D4A574; letter-spacing: 4px; margin-bottom: 16px; }
 h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
-h3 { font-size: 20px; color: #D4A574; margin-bottom: 10px; }
-
 .subtitle { font-size: 18px; color: #888; margin-bottom: 20px; }
-
-.desc-box {
-  max-width: 750px;
-  margin: 0 auto;
-  background: rgba(212,165,116,0.08);
-  border: 1px solid rgba(212,165,116,0.25);
-  border-radius: 16px;
-  padding: 24px 36px;
-  font-size: 17px;
-  color: #ccc;
-  line-height: 1.9;
-}
-
-.desc-box2 {
-  max-width: 750px;
-  margin: 0 auto;
-  background: rgba(74,222,128,0.08);
-  border: 1px solid rgba(74,222,128,0.25);
-  border-radius: 16px;
-  padding: 24px 36px;
-  font-size: 17px;
-  color: #ccc;
-  line-height: 1.9;
-}
-
-.page-num {
-  font-size: 12px;
-  color: rgba(212,165,116,0.4);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
+.desc-box { max-width: 750px; margin: 0 auto; background: rgba(212,165,116,0.08); border: 1px solid rgba(212,165,116,0.25); border-radius: 16px; padding: 24px 36px; font-size: 17px; color: #ccc; line-height: 1.9; }
+.page-num { font-size: 12px; color: rgba(212,165,116,0.4); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 30px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
-.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
-
-.card {
-  background: #161b22;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.07);
-}
-
-.card img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  display: block;
-  background: #0d1117;
-}
-
-.card .caption {
-  padding: 18px 22px;
-  background: #1c2128;
-}
-
-.card .caption h4 {
-  font-size: 16px;
-  color: #D4A574;
-  margin-bottom: 8px;
-}
-
-.card .caption p {
-  font-size: 13px;
-  color: #8b949e;
-  line-height: 1.7;
-}
-
-.big-card {
-  background: #161b22;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.07);
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.big-card img {
-  width: 100%;
-  max-height: 68vh;
-  object-fit: contain;
-  display: block;
-  background: #0d1117;
-}
-
-.big-card .caption {
-  padding: 22px 28px;
-  background: #1c2128;
-}
-
-.big-card .caption h4 {
-  font-size: 18px;
-  color: #D4A574;
-  margin-bottom: 10px;
-}
-
-.big-card .caption p {
-  font-size: 14px;
-  color: #8b949e;
-  line-height: 1.7;
-}
-
-.dot-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.dot-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px 24px;
-  background: rgba(255,255,255,0.03);
-  border-radius: 12px;
-  border-left: 3px solid #D4A574;
-}
-
+.card { background: #161b22; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); }
+.card img { width: 100%; height: 340px; object-fit: cover; display: block; background: #0d1117; }
+.card .caption { padding: 18px 22px; background: #1c2128; }
+.card .caption h4 { font-size: 16px; color: #D4A574; margin-bottom: 8px; }
+.card .caption p { font-size: 13px; color: #8b949e; line-height: 1.7; }
+.big-card { background: #161b22; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); max-width: 1200px; margin: 0 auto; width: 100%; }
+.big-card img { width: 100%; max-height: 68vh; object-fit: contain; display: block; background: #0d1117; }
+.big-card .caption { padding: 22px 28px; background: #1c2128; }
+.big-card .caption h4 { font-size: 18px; color: #D4A574; margin-bottom: 10px; }
+.big-card .caption p { font-size: 14px; color: #8b949e; line-height: 1.7; }
+.dot-list { display: flex; flex-direction: column; gap: 14px; max-width: 800px; margin: 0 auto; }
+.dot-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 24px; background: rgba(255,255,255,0.03); border-radius: 12px; border-left: 3px solid #D4A574; }
 .dot-item .num { font-size: 22px; font-weight: 700; color: #D4A574; min-width: 40px; }
 .dot-item .text { font-size: 15px; color: #ccc; line-height: 1.7; }
-
-.metric-row { display: flex; gap: 20px; margin-top: 30px; justify-content: center; flex-wrap: wrap; }
-.metric-box {
-  background: rgba(212,165,116,0.08);
-  border: 1px solid rgba(212,165,116,0.2);
-  border-radius: 14px;
-  padding: 20px 30px;
-  text-align: center;
-  min-width: 160px;
-}
-.metric-box .num { font-size: 36px; font-weight: 700; color: #D4A574; }
-.metric-box .label { font-size: 13px; color: #888; margin-top: 6px; }
-
 .tag-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 16px; }
 .tag { padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; }
 .tag-blue { background: rgba(96,165,250,0.15); color: #60a5fa; }
 .tag-green { background: rgba(74,222,128,0.15); color: #4ade80; }
 .tag-yellow { background: rgba(251,191,36,0.15); color: #fbbf24; }
 .tag-purple { background: rgba(192,132,252,0.15); color: #c084fc; }
-
-.section-header {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  padding: 80px 60px;
-  text-align: center;
-  border-bottom: 3px solid #D4A574;
-}
-
+.section-header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 80px 60px; text-align: center; border-bottom: 3px solid #D4A574; }
 .section-content { padding: 60px; background: #0d1117; }
 .section-content.alt { background: #161b22; }
-
-.section-footer {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  padding: 60px;
-  text-align: center;
-  border-top: 3px solid #D4A574;
-}
-
+.section-footer { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 60px; text-align: center; border-top: 3px solid #D4A574; }
 .separator { height: 2px; background: linear-gradient(90deg, transparent, #D4A574, transparent); margin: 0; }
-
-.cover-slide {
-  background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #16213e 100%);
-  text-align: center;
-  align-items: center;
-}
-
+.cover-slide { background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #16213e 100%); text-align: center; align-items: center; }
 .cover-slide .logo { font-size: 120px; font-weight: 700; color: #D4A574; letter-spacing: 12px; margin-bottom: 30px; }
 .cover-slide h1 { font-size: 48px; letter-spacing: 6px; }
 .cover-slide .subtitle { font-size: 20px; color: #666; margin-top: 16px; }
 .cover-slide .date { font-size: 14px; color: #444; margin-top: 60px; }
-
-.thanks-slide {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  text-align: center;
-  align-items: center;
-}
-
+.thanks-slide { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); text-align: center; align-items: center; }
 .thanks-slide .logo { font-size: 100px; font-weight: 700; color: #D4A574; letter-spacing: 10px; margin-bottom: 30px; }
-
-.sub-section-label {
-  font-size: 12px;
-  color: rgba(212,165,116,0.5);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.sec-card {
-  background: rgba(212,165,116,0.06);
-  border: 1px solid rgba(212,165,116,0.15);
-  border-radius: 14px;
-  padding: 24px;
-  text-align: center;
-}
-
+.sub-section-label { font-size: 12px; color: rgba(212,165,116,0.5); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; }
+.sec-card { background: rgba(212,165,116,0.06); border: 1px solid rgba(212,165,116,0.15); border-radius: 14px; padding: 24px; text-align: center; }
 .sec-card .icon { font-size: 36px; margin-bottom: 12px; }
 .sec-card h4 { font-size: 16px; color: #D4A574; margin-bottom: 8px; }
 .sec-card p { font-size: 13px; color: #888; line-height: 1.6; }
-
-.nav-dots {
-  position: fixed;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 999;
-}
-
-.nav-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(212,165,116,0.3);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
+.highlight-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
+.nav-dots { position: fixed; right: 30px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 12px; z-index: 999; }
+.nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(212,165,116,0.3); cursor: pointer; transition: all 0.3s; }
 .nav-dot:hover, .nav-dot.active { background: #D4A574; transform: scale(1.3); }
-
-.highlight-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
-.highlight-item {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-}
-.highlight-item .icon { font-size: 28px; margin-bottom: 10px; }
-.highlight-item h4 { font-size: 15px; color: #D4A574; margin-bottom: 6px; }
-.highlight-item p { font-size: 13px; color: #888; }
 </style>
 </head>
 <body>
 
 <nav class="nav-dots">
   <div class="nav-dot active" title="封面"></div>
-  <div class="nav-dot" title="目录"></div>
-  <div class="nav-dot" title="搭建详情"></div>
-  <div class="nav-dot" title="安全详情"></div>
-  <div class="nav-dot" title="后台详情"></div>
-  <div class="nav-dot" title="流量数据"></div>
   <div class="nav-dot" title="五月复盘"></div>
+  <div class="nav-dot" title="英国站进展"></div>
+  <div class="nav-dot" title="流量数据"></div>
+  <div class="nav-dot" title="本周计划"></div>
   <div class="nav-dot" title="感谢"></div>
 </nav>
 
@@ -296,226 +74,10 @@ h3 { font-size: 20px; color: #D4A574; margin-bottom: 10px; }
   <div class="logo">OUNIN</div>
   <h1>运营工作完整报告</h1>
   <p class="subtitle">Independent Website Operations Report</p>
-  <p class="date">2026年5月11日</p>
+  <p class="date">2026年5月25日</p>
 </div>
 
-<!-- SLIDE 2: AGENDA -->
-<div class="slide section-header" id="s2">
-  <div class="sub-section-label">Overview</div>
-  <h1>报告大纲</h1>
-  <p class="subtitle">OUNIN 独立站 · 四大板块汇报</p>
-  <div class="grid-4" style="margin-top:50px;">
-    <div class="card" style="padding:30px;text-align:center;">
-      <div style="font-size:40px;margin-bottom:16px;">🏗️</div>
-      <h4 style="color:#D4A574;font-size:18px;">搭建详情</h4>
-      <p style="color:#666;font-size:14px;margin-top:10px;">6张截图</p>
-    </div>
-    <div class="card" style="padding:30px;text-align:center;">
-      <div style="font-size:40px;margin-bottom:16px;">🔒</div>
-      <h4 style="color:#D4A574;font-size:18px;">安全详情</h4>
-      <p style="color:#666;font-size:14px;margin-top:10px;">3张截图</p>
-    </div>
-    <div class="card" style="padding:30px;text-align:center;">
-      <div style="font-size:40px;margin-bottom:16px;">⚙️</div>
-      <h4 style="color:#D4A574;font-size:18px;">后台详情</h4>
-      <p style="color:#666;font-size:14px;margin-top:10px;">6张截图</p>
-    </div>
-    <div class="card" style="padding:30px;text-align:center;">
-      <div style="font-size:40px;margin-bottom:16px;">📊</div>
-      <h4 style="color:#D4A574;font-size:18px;">流量数据</h4>
-      <p style="color:#666;font-size:14px;margin-top:10px;">4张截图</p>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 3: BUILD SECTION HEADER -->
-<div class="slide section-header" id="s3">
-  <div class="sub-section-label">Part 01 · Build</div>
-  <h1>搭建详情</h1>
-  <p class="subtitle">支付系统、收款页面、跳转流程全覆盖</p>
-  <div class="desc-box" style="margin-top:30px;">
-    完成支付系统搭建、收款页面搭建建设以及跳转。<br>
-    后续将继续优化页面的设计。
-  </div>
-</div>
-
-<!-- BUILD SLIDE 4 -->
-<div class="slide section-content" id="s3b">
-  <div class="page-num">— 搭建详情 01 / 06 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/s_1802361252.png" alt="OUNIN 首页"><div class="caption"><h4>OUNIN 首页产品展示</h4><p>4款核心产品：BESTSELLER $250 (原价$399)、NEW $250 (原价$429)、POPULAR $309 (原价$699)、-20% $150 (原价$299)。清晰的促销标签系统，提升购买转化。</p></div></div>
-    <div class="card"><img src="reports/s_401493726.png" alt="产品详情页"><div class="caption"><h4>Ounin Pro Embedded 详情页</h4><p>$149 起售，配备 Add to Cart 和 PayPal 支付按钮。数量选择器、中文产品描述（75升容量 · 12种烹饪模式）、邮件订阅区域均已就位。</p></div></div>
-  </div>
-</div>
-
-<!-- BUILD SLIDE 5 -->
-<div class="slide section-content alt" id="s3c">
-  <div class="page-num">— 搭建详情 02 / 06 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/s_1838955523.png" alt="购物车侧边栏"><div class="caption"><h4>购物车侧边栏</h4><p>右侧滑出式购物车抽屉，显示 Ounin Pro Embedded × 2，总价 $298 USD。Discount 折扣区、运费提示、Checkout 和 PayPal 双按钮完整配置。</p></div></div>
-    <div class="card"><img src="reports/s_-387354112.png" alt="结账页面"><div class="caption"><h4>Shopify 结账页面</h4><p>store.ouninshop.com/checkouts/... 完整结账流程。Email 登录、配送地址（美国）、运输方式选择，右侧订单摘要显示商品图片、名称、数量及总价 $149.00 USD。</p></div></div>
-  </div>
-</div>
-
-<!-- BUILD SLIDE 6 -->
-<div class="slide section-content" id="s3d">
-  <div class="page-num">— 搭建详情 03 / 06 —</div>
-  <div class="big-card"><img src="reports/s_1802361252.png" alt="OUNIN 品牌首页" style="max-height:60vh;"><div class="caption"><h4>OUNIN 品牌首页 — store.ouninshop.com</h4><p>品牌首页横幅（Hero Banner），标语 "Browse our latest products"。顶部导航集成 Home 和 Catalog，购物车显示数量为 2。底部邮件订阅区域就位，为后续 EDM 营销做好准备。</p></div></div>
-</div>
-
-<!-- BUILD SLIDE 7 -->
-<div class="slide section-content alt" id="s3e">
-  <div class="page-num">— 搭建详情 04 / 06 —</div>
-  <div class="big-card"><img src="reports/s_-685773993.png" alt="产品目录页"><div class="caption"><h4>产品目录页 — store.ouninshop.com/collections/all</h4><p>Shopify 产品集合页面，Availability 和 Price 筛选就绪，Sort 排序功能正常。Powered by Shopify 底部版权信息合规展示。</p></div></div>
-</div>
-
-<!-- BUILD SLIDE 8 -->
-<div class="slide section-footer" id="s3f">
-  <h2>✅ 搭建完成项</h2>
-  <div class="dot-list">
-    <div class="dot-item"><div class="num">01</div><div class="text">完成 Shopify Headless 模式接入，store.ouninshop.com 已运行</div></div>
-    <div class="dot-item"><div class="num">02</div><div class="text">完成支付系统搭建 — PayPal 按钮、Checkout 跳转均已打通</div></div>
-    <div class="dot-item"><div class="num">03</div><div class="text">完成收款页面搭建 — 结账流程完整，用户可顺畅完成下单付款</div></div>
-    <div class="dot-item"><div class="num">04</div><div class="text">完成页面跳转建设 — 产品页→购物车→结账，全链路贯通</div></div>
-  </div>
-  <p style="margin-top:40px;font-size:15px;color:#555;">后续将继续优化页面的设计，提升用户体验与转化率</p>
-</div>
-
-<div class="separator"></div>
-
-<!-- SLIDE 9: SECURITY HEADER -->
-<div class="slide section-header" id="s4">
-  <div class="sub-section-label">Part 02 · Security</div>
-  <h1>安全详情</h1>
-  <p class="subtitle">Cloudflare 云端防护 · DNS 域名解析完成</p>
-  <div class="desc-box2" style="margin-top:30px;">
-    自定义的前端目前完成了全部接入工作，安全性以及服务器直接对接 Cloudflare 云端服务器。<br>
-    域名已完成移接并完善了 DNS，丝毫不用担心安全性问题。
-  </div>
-  <div class="tag-row" style="margin-top:24px;">
-    <span class="tag tag-blue">Cloudflare CDN</span>
-    <span class="tag tag-green">SSL/TLS Full</span>
-    <span class="tag tag-yellow">Bot Fight Mode</span>
-    <span class="tag tag-purple">DNS 已迁移</span>
-  </div>
-</div>
-
-<!-- SECURITY SLIDE 10 -->
-<div class="slide section-content" id="s4b">
-  <div class="page-num">— 安全详情 01 / 03 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/s_437535346.png" alt="Cloudflare Overview"><div class="caption"><h4>Cloudflare 域名管理 — Overview</h4><p>ouninshop.com 已接入 Cloudflare，免费计划。机器人对抗模式（Bot Fight Mode）和客户端安全（Client-side Security）均已开启。DNS 解析、域名记录管理就绪。Zone ID: 91403386245d57e972e35345052bba95。</p></div></div>
-    <div class="card"><img src="reports/s_437533296.png" alt="SSL/TLS Overview"><div class="caption"><h4>SSL/TLS 加密设置 — 全套模式</h4><p>加密模式：全套（Full）— 访客↔Cloudflare↔源站全程加密。过去24小时 TLS v1.3 占比最高（1.08k 次请求），自动模式4天前已禁用，确保最高等级传输安全。</p></div></div>
-  </div>
-</div>
-
-<!-- SECURITY SLIDE 11 -->
-<div class="slide section-content alt" id="s4c">
-  <div class="page-num">— 安全详情 02 / 03 —</div>
-  <div class="big-card" style="max-width:600px;"><img src="reports/favicon.png" alt="OUNIN Favicon" style="max-height:50vh;"><div class="caption"><h4>品牌 Favicon 图标</h4><p>OUNIN 品牌标识的浏览器标签页图标已完成配置，黑色圆形主体配橙色边框，辨识度高，符合品牌视觉规范。</p></div></div>
-</div>
-
-<!-- SECURITY SLIDE 12 -->
-<div class="slide section-footer" id="s4d">
-  <h2>✅ 安全完成项</h2>
-  <div class="highlight-grid">
-    <div class="sec-card"><div class="icon">🌐</div><h4>Cloudflare 云端</h4><p>直接对接 Cloudflare 全球云端服务器，享受 CDN 加速、DDoS 防护</p></div>
-    <div class="sec-card"><div class="icon">🔐</div><h4>SSL/TLS 加密</h4><p>全套（Full）模式，TLS v1.3 全站加密，访客数据全程保护</p></div>
-    <div class="sec-card"><div class="icon">🛡️</div><h4>Bot 防护</h4><p>机器人对抗模式已开启，防止恶意抓取与攻击</p></div>
-  </div>
-  <p style="margin-top:30px;font-size:14px;color:#555;">域名已完成移接并完善 DNS，丝毫不用担心安全性问题</p>
-</div>
-
-<div class="separator"></div>
-
-<!-- SLIDE 13: BACKEND HEADER -->
-<div class="slide section-header" id="s5">
-  <div class="sub-section-label">Part 03 · Backend</div>
-  <h1>后台详情</h1>
-  <p class="subtitle">Shopify 后台基本搭建 · 支付/收款/税务/物流/账号/用户全覆盖</p>
-  <div class="desc-box" style="margin-top:30px;">
-    已完成 Shopify 后台基本搭建措施，包括支付系统、收款系统、税务问题、物流问题、<br>
-    以及账号信息问题、用户问题，全部配置完成并稳定运行。
-  </div>
-  <div class="tag-row" style="margin-top:20px;">
-    <span class="tag tag-green">支付系统</span>
-    <span class="tag tag-blue">收款系统</span>
-    <span class="tag tag-yellow">税务配置</span>
-    <span class="tag tag-purple">物流设置</span>
-    <span class="tag tag-blue">账号信息</span>
-    <span class="tag tag-green">用户管理</span>
-  </div>
-</div>
-
-<!-- BACKEND SLIDE 14 -->
-<div class="slide section-content" id="s5b">
-  <div class="page-num">— 后台详情 01 / 06 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/backend_0.png" alt="税费配置"><div class="caption"><h4>税费和关税设置 — Shopify Tax Services</h4><p>Shopify Tax Services 已激活（Active）。支持13个税务区域：澳大利亚、加拿大、欧盟（Shopify Tax）、香港、以色列、日本、马来西亚、新西兰、挪威、新加坡、韩国、瑞士、阿联酋。Shopify 自动税务计算功能已就绪。</p></div></div>
-    <div class="card"><img src="reports/backend_1.png" alt="结账配置"><div class="caption"><h4>Checkout 结账配置</h4><p>OUNIN 配置（已发布）和配置副本完整配置。客户联系方式支持电话/邮件，邮件为默认选项。客户信息字段：姓名仅需姓氏、公司名不收集、地址二线可选、电话号码不收集。</p></div></div>
-  </div>
-</div>
-
-<!-- BACKEND SLIDE 15 -->
-<div class="slide section-content alt" id="s5c">
-  <div class="page-num">— 后台详情 02 / 06 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/backend_2.png" alt="收款配置"><div class="caption"><h4>Payments 收款设置 — PayPal 已接入</h4><p>PayPal 部分启用（Partially active），2% 交易费率。付款捕获方式：结账时自动执行（已选）。支持第三方服务商，Shopify 标准交易费 2%。手动付款方式可添加线下收款选项。</p></div></div>
-    <div class="card"><img src="reports/backend_3.png" alt="常规设置"><div class="caption"><h4>General 常规设置 — 业务信息完整</h4><p>实体：OUNIN（广东佛山，顺德区均安镇同安路5-6号）。商店邮箱：ounin2025@gmail.com，电话：+86 757 28996870。货币：USD，默认重量单位：磅（lb），时区：太平洋时间（PST）。</p></div></div>
-  </div>
-</div>
-
-<!-- BACKEND SLIDE 16 -->
-<div class="slide section-content" id="s5d">
-  <div class="page-num">— 后台详情 03 / 06 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/backend_4.png" alt="域名配置"><div class="caption"><h4>Domains 域名管理 — 多域名已连接</h4><p>主域名 store.ouninshop.com 已连接（Primary）。额外连接域名：e8dtt6-gu.myshopify.com、ounin.myshopify.com、ouninshop.com、www.ouninshop.com（全部 Connected）。客户账户域名 account.ouninshop.com 已配置为主域名。</p></div></div>
-    <div class="card"><img src="reports/backend_5.png" alt="商店总览"><div class="caption"><h4>商店后台首页 — 数据概览</h4><p>近30天数据：Sessions 130次访问、Total Sales $163、Orders 1单、Conversion Rate 0.76%。待办事项：1个订单待发货（1 order to fulfill）、1笔待收款（1 payment to capture）。商店状态：Your store is open for business · store.ouninshop.com。</p></div></div>
-  </div>
-</div>
-
-<!-- BACKEND SLIDE 17: Summary -->
-<div class="slide section-footer" id="s5e">
-  <h2>✅ 后台完成项</h2>
-  <div class="highlight-grid">
-    <div class="sec-card"><div class="icon">💳</div><h4>支付系统</h4><p>PayPal 已接入，2% 交易费，结账时自动捕获付款</p></div>
-    <div class="sec-card"><div class="icon">💰</div><h4>收款系统</h4><p>Shopify Payments 架构完成，支持多种支付方式配置</p></div>
-    <div class="sec-card"><div class="icon">📋</div><h4>税务配置</h4><p>Shopify Tax 已激活，13个区域自动税务计算</p></div>
-    <div class="sec-card"><div class="icon">🚚</div><h4>物流问题</h4><p>Shipping and Delivery 已配置发货和配送设置</p></div>
-    <div class="sec-card"><div class="icon">👤</div><h4>账号信息</h4><p>OUNIN 实体信息、联系方式、地址完整配置</p></div>
-    <div class="sec-card"><div class="icon">👥</div><h4>用户管理</h4><p>客户账户系统已配置，用户数据管理就绪</p></div>
-  </div>
-  <p style="margin-top:30px;font-size:14px;color:#555;">已完成 Shopify 后台基本搭建措施，全部配置完成并稳定运行</p>
-</div>
-
-<div class="separator"></div>
-
-<!-- SLIDE 18: TRAFFIC HEADER -->
-<div class="slide section-header" id="s6">
-  <div class="sub-section-label">Part 04 · Analytics</div>
-  <h1>流量数据</h1>
-  <p class="subtitle">网站访问数据 · 用户行为分析</p>
-</div>
-
-<!-- TRAFFIC SLIDE 18 -->
-<div class="slide section-content" id="s6b">
-  <div class="page-num">— 流量数据 01 / 04 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/traffic_0.png" alt="Google Analytics"><div class="caption"><h4>Google Analytics — 自然搜索流量报告（90天）</h4><p>2026年2月10日 - 5月10日数据：自然搜索点击 295 次，展示 6,487 次，点击率 4.55%，平均排名 4.48。活跃用户 137 人，参与会话 123 个（参与率 67.21%），平均互动时长 2分19秒，事件总数 1,730 次。首页（/）贡献 84% 的流量（248次点击）。</p></div></div>
-    <div class="card"><img src="reports/traffic_1.png" alt="Search Console Overview"><div class="caption"><h4>Google Search Console — 效果概览（7天）</h4><p>ouninglobal.com 过去7天数据：总点击 16 次，展示 205 次，点击率 7.8%，平均排名 5.8。首页（https://www.ouninglobal.com/）表现最佳，14 次点击、152 次展示、9.2% CTR、排名 5.0。</p></div></div>
-  </div>
-</div>
-
-<!-- TRAFFIC SLIDE 19 -->
-<div class="slide section-content alt" id="s6c">
-  <div class="page-num">— 流量数据 02 / 04 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/traffic_2.png" alt="Search Console Pages"><div class="caption"><h4>Google Search Console — 热门页面（7天）</h4><p>热门页面 TOP 10：首页 / 以 14 次点击、152 次展示稳居第一。产品页 product.html 获 1 次点击、58 次展示、1.7% CTR。共 23 个页面有搜索展示数据，大部分页面排名在 2-8 位之间，SEO 潜力较大。</p></div></div>
-    <div class="card"><img src="reports/traffic_3.png" alt="Search Console Queries"><div class="caption"><h4>Google Search Console — 热门查询词（7天）</h4><p>品牌词搜索表现：ouin 1次点击（16次展示）、ounin steam oven 1次点击（14次展示，排名1.3）、ounin air fryer 1次点击（5次展示，排名1.4，点击率20%）。"is it a chinese company?" 排名1.0。共 11 个查询词，SEO 优化空间显著。</p></div></div>
-  </div>
-</div>
-
-<!-- SLIDE: MAY REVIEW -->
+<!-- SLIDE 2: MAY REVIEW HEADER -->
 <div class="slide section-header" id="sMay">
   <div class="sub-section-label">May 2026</div>
   <h1>五月复盘</h1>
@@ -532,7 +94,6 @@ h3 { font-size: 20px; color: #D4A574; margin-bottom: 10px; }
   </div>
 </div>
 
-<!-- MAY SLIDE: TIMELINE -->
 <div class="slide section-content" id="sMay2">
   <div class="page-num">— 五月重点节点 01 / 02 —</div>
   <div class="dot-list">
@@ -543,7 +104,6 @@ h3 { font-size: 20px; color: #D4A574; margin-bottom: 10px; }
   </div>
 </div>
 
-<!-- MAY SLIDE: UK EXPANSION -->
 <div class="slide section-content alt" id="sMay3">
   <div class="page-num">— 五月重点节点 02 / 02 —</div>
   <div class="dot-list">
@@ -554,7 +114,6 @@ h3 { font-size: 20px; color: #D4A574; margin-bottom: 10px; }
   </div>
 </div>
 
-<!-- MAY REVIEW FOOTER -->
 <div class="slide section-footer" id="sMay4">
   <h2>✅ 建设性推进中</h2>
   <div class="highlight-grid">
@@ -568,8 +127,107 @@ h3 { font-size: 20px; color: #D4A574; margin-bottom: 10px; }
 
 <div class="separator"></div>
 
-<!-- SLIDE: THANKS -->
-<div class="slide thanks-slide" id="s7">
+<!-- SLIDE 3: UK SITE UPDATE -->
+<div class="slide section-header" id="sUK">
+  <div class="sub-section-label">May 25 Update</div>
+  <h1>英国站最新进展</h1>
+  <p class="subtitle">网络 · 后台 · 服务器部署 · 跳转 · Shopify结算 · 海外仓</p>
+  <div class="desc-box" style="margin-top:30px;">
+    英国站基础设施全部就绪：网络/后台/服务器部署/跳转/Shopify结算/海外仓部署均已完成。<br>
+    Shopify 主体已由任润主体公司注册，英国市场支付链路全面打通，仅剩前端内容本地化修改。
+  </div>
+  <div class="tag-row" style="margin-top:24px;">
+    <span class="tag tag-green">✅ 服务器部署</span>
+    <span class="tag tag-blue">✅ Shopify结算</span>
+    <span class="tag tag-yellow">✅ 支付链路</span>
+    <span class="tag tag-purple">⏳ 前端本地化</span>
+  </div>
+</div>
+
+<div class="slide section-content" id="sUK2">
+  <div class="page-num">— 英国站进展 01 / 04 —</div>
+  <div class="grid-2">
+    <div class="card"><img src="file:///C:/Users/Mayn/Desktop/服务器rule部署.png" alt="服务器rule部署"><div class="caption"><h4>服务器 Rule 部署</h4><p>英国站网络规则配置完成，服务器部署就绪。</p></div></div>
+    <div class="card"><img src="file:///C:/Users/Mayn/Desktop/云服务器部署.png" alt="云服务器部署"><div class="caption"><h4>云服务器部署</h4><p>云端服务器配置完成，海外仓部署设置就绪。</p></div></div>
+  </div>
+</div>
+
+<div class="slide section-content alt" id="sUK3">
+  <div class="page-num">— 英国站进展 02 / 04 —</div>
+  <div class="grid-2">
+    <div class="card"><img src="file:///C:/Users/Mayn/Desktop/shopify主体.png" alt="Shopify主体"><div class="caption"><h4>Shopify 主体注册</h4><p>Shopify 主体已由任润主体公司注册，英国市场支付链路全面打通。</p></div></div>
+    <div class="card"><img src="file:///C:/Users/Mayn/Desktop/英国站.png" alt="英国站"><div class="caption"><h4>英国站部署</h4><p>uk.ouninshop.com 整体部署完成，跳转/结算/海外仓全部就绪。</p></div></div>
+  </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 4: TRAFFIC DATA -->
+<div class="slide section-header" id="sTraffic">
+  <div class="sub-section-label">Traffic Data</div>
+  <h1>流量数据详情</h1>
+  <p class="subtitle">网站访问数据 · 五月第四周</p>
+</div>
+
+<div class="slide section-content" id="sTraffic2">
+  <div class="page-num">— 流量数据详情 01 / 05 —</div>
+  <div class="big-card"><img src="file:///C:/Users/Mayn/Desktop/5.25.png" alt="流量数据1" style="max-height:65vh;"><div class="caption"><h4>五月第四周流量数据</h4><p>网站访问、用户行为、转化数据综合分析。</p></div></div>
+</div>
+
+<div class="slide section-content alt" id="sTraffic3">
+  <div class="page-num">— 流量数据详情 02 / 05 —</div>
+  <div class="big-card"><img src="file:///C:/Users/Mayn/Desktop/525.1.png" alt="流量数据2" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>用户来源、访问路径、关键指标追踪。</p></div></div>
+</div>
+
+<div class="slide section-content" id="sTraffic4">
+  <div class="page-num">— 流量数据详情 03 / 05 —</div>
+  <div class="big-card"><img src="file:///C:/Users/Mayn/Desktop/525.2.png" alt="流量数据3" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>热门页面、搜索关键词、受众分布。</p></div></div>
+</div>
+
+<div class="slide section-content alt" id="sTraffic5">
+  <div class="page-num">— 流量数据详情 04 / 05 —</div>
+  <div class="big-card"><img src="file:///C:/Users/Mayn/Desktop/525.3.png" alt="流量数据4" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>转化漏斗、用户留存、流量来源构成。</p></div></div>
+</div>
+
+<div class="slide section-content" id="sTraffic6">
+  <div class="page-num">— 流量数据详情 05 / 05 —</div>
+  <div class="big-card"><img src="file:///C:/Users/Mayn/Desktop/525.4.png" alt="流量数据5" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>综合数据呈现，为后续优化提供依据。</p></div></div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 5: WEEKLY PLAN -->
+<div class="slide section-header" id="sWeekly">
+  <div class="sub-section-label">Weekly Plan</div>
+  <h1>本周计划</h1>
+  <p class="subtitle">六月第一周 · 重点工作项</p>
+</div>
+
+<div class="slide section-content" id="sWeekly2">
+  <div class="page-num">— 本周计划 01 / 01 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num">01</div><div class="text">对接 ERP 接入 — ERP系统完善，产品信息清洗，Shopify 库存绑定</div></div>
+    <div class="dot-item"><div class="num">02</div><div class="text">美国税号申请跟进 — 中介筛选确认，材料准备，推进申请进度</div></div>
+    <div class="dot-item"><div class="num">03</div><div class="text">修改 UK站前端内容 — 价格货币切换£，温度单位°F→°C，容量单位本地化</div></div>
+    <div class="dot-item"><div class="num">04</div><div class="text">GEO/SEO 完善 — UK站 Meta 信息本地化，Hreflang 确认，Schema Markup 检查</div></div>
+  </div>
+</div>
+
+<div class="slide section-footer" id="sWeekly3">
+  <h2>本周目标</h2>
+  <div class="highlight-grid">
+    <div class="sec-card"><div class="icon">📦</div><h4>ERP接入</h4><p>产品信息录入完整，库存与 Shopify 同步</p></div>
+    <div class="sec-card"><div class="icon">💰</div><h4>美国税号</h4><p>确定中介，提交申请材料</p></div>
+    <div class="sec-card"><div class="icon">🇬🇧</div><h4>UK站本地化</h4><p>价格/单位/VAT 标注完成</p></div>
+    <div class="sec-card"><div class="icon">🔍</div><h4>GEO/SEO</h4><p>Meta本地化，SEO基础完善</p></div>
+  </div>
+  <p style="margin-top:30px;font-size:14px;color:#555;">六月追流量</p>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 6: THANKS -->
+<div class="slide thanks-slide" id="s6">
   <div class="logo">OUNIN</div>
   <h1>感谢观看</h1>
   <p class="subtitle">Questions & Discussion</p>
