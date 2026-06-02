@@ -15,6 +15,7 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 .desc-box { max-width: 750px; margin: 0 auto; background: rgba(212,165,116,0.08); border: 1px solid rgba(212,165,116,0.25); border-radius: 16px; padding: 24px 36px; font-size: 17px; color: #ccc; line-height: 1.9; }
 .page-num { font-size: 12px; color: rgba(212,165,116,0.4); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 30px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
 .card { background: #161b22; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); }
 .card img { width: 100%; height: 340px; object-fit: cover; display: block; background: #0d1117; }
 .card .caption { padding: 18px 22px; background: #1c2128; }
@@ -55,6 +56,7 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 .sec-card p { font-size: 13px; color: #888; line-height: 1.6; }
 .highlight-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
 .highlight-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
+.highlight-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px; }
 .nav-dots { position: fixed; right: 30px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 12px; z-index: 999; }
 .nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(212,165,116,0.3); cursor: pointer; transition: all 0.3s; }
 .nav-dot:hover, .nav-dot.active { background: #D4A574; transform: scale(1.3); }
@@ -63,6 +65,11 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 .status-progress { background: rgba(251,191,36,0.15); color: #fbbf24; }
 .status-blocked { background: rgba(248,113,113,0.15); color: #f87171; }
 .status-todo { background: rgba(148,163,184,0.15); color: #94a3b8; }
+.summary-box { background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.25); border-radius: 16px; padding: 28px 36px; max-width: 900px; margin: 0 auto; }
+.summary-box h3 { color: #4ade80; font-size: 20px; margin-bottom: 16px; }
+.summary-box p { font-size: 15px; color: #ccc; line-height: 1.9; }
+.summary-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.img-full { width: 100%; max-height: 60vh; object-fit: contain; display: block; background: #0d1117; }
 </style>
 </head>
 <body>
@@ -73,7 +80,7 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
   <div class="nav-dot" title="五月第四周进展"></div>
   <div class="nav-dot" title="六月第一周计划"></div>
   <div class="nav-dot" title="英国站本地化"></div>
-  <div class="nav-dot" title="当前阻塞项"></div>
+  <div class="nav-dot" title="总结"></div>
   <div class="nav-dot" title="感谢"></div>
 </nav>
 
@@ -221,7 +228,7 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 
 <div class="separator"></div>
 
-<!-- SLIDE 5: UK SITE LOCALIZATION DETAIL -->
+<!-- SLIDE 5: UK SITE LOCALIZATION -->
 <div class="slide section-header" id="sUK">
   <div class="sub-section-label">UK Site Localization</div>
   <h1>英国站本地化</h1>
@@ -259,30 +266,70 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 
 <div class="separator"></div>
 
-<!-- SLIDE 6: BLOCKERS -->
-<div class="slide section-header" id="sBlockers">
-  <div class="sub-section-label">Current Blockers</div>
-  <h1>当前阻塞项</h1>
-  <p class="subtitle">需要决策或推进的事项</p>
+<!-- SLIDE 5b: UK SITE IMAGES -->
+<div class="slide section-header" id="sUKimg">
+  <div class="sub-section-label">UK Site Screenshots</div>
+  <h1>英国站截图</h1>
+  <p class="subtitle">英国站部署截图 · 五月第四周存档</p>
 </div>
 
-<div class="slide section-content" id="sBlockers2">
-  <div class="page-num">— 当前阻塞项 01 / 01 —</div>
-  <div class="dot-list">
-    <div class="dot-item"><div class="num" style="color:#f87171;">🔴</div><div class="text">UK站定价策略 — £ 价格要不要比 USD 折算略高（覆盖 VAT 20%）？<br><span style="font-size:13px;color:#888;">影响利润率和英国市场竞争力，需尽快决策</span></div></div>
-    <div class="dot-item"><div class="num" style="color:#f87171;">🔴</div><div class="text">美国税号中介 — 中介仍在接触中，价格/资质未确认<br><span style="font-size:13px;color:#888;">需要至少3家比价，$300-$800区间，2-6周时效</span></div></div>
-    <div class="dot-item"><div class="num" style="color:#fbbf24;">🟡</div><div class="text">ERP 系统 — 是否有在用的 ERP？还是从零开始选？<br><span style="font-size:13px;color:#888;">现有框架在用但产品信息不完整，需确认方向</span></div></div>
-    <div class="dot-item"><div class="num" style="color:#fbbf24;">🟡</div><div class="text">红人合作预算 — 每个红人合作预算多少？<br><span style="font-size:13px;color:#888;">计划八月九月开始，需提前规划预算</span></div></div>
+<div class="slide section-content" id="sUKimg2">
+  <div class="page-num">— 英国站截图 01 / 02 —</div>
+  <div class="grid-2">
+    <div class="card"><img src="reports/英国站.png" alt="英国站"><div class="caption"><h4>英国站部署</h4><p>uk.ouninshop.com 整体部署完成，跳转/结算/海外仓全部就绪。</p></div></div>
+    <div class="card"><img src="reports/英镑结算.png" alt="英镑结算"><div class="caption"><h4>英镑结算</h4><p>英国站 Shopify 后台配置 GBP 货币，支付链路已打通。</p></div></div>
   </div>
 </div>
 
-<div class="slide section-footer" id="sBlockers3">
-  <h2>阻塞项解决路线</h2>
-  <div class="highlight-grid">
-    <div class="sec-card"><div class="icon" style="color:#f87171;">🔴</div><h4>UK定价决策</h4><p>需要确认 £ 定价策略</p></div>
-    <div class="sec-card"><div class="icon" style="color:#f87171;">🔴</div><h4>税号中介</h4><p>需要3家比价并签约</p></div>
-    <div class="sec-card"><div class="icon" style="color:#fbbf24;">🟡</div><h4>ERP方向</h4><p>确认是否已有ERP或从零选</p></div>
-    <div class="sec-card"><div class="icon" style="color:#fbbf24;">🟡</div><h4>红人预算</h4><p>提前规划合作预算</p></div>
+<div class="slide section-content alt" id="sUKimg3">
+  <div class="page-num">— 英国站截图 02 / 02 —</div>
+  <div class="card" style="max-width:900px;margin:0 auto;">
+    <img src="reports/英国市场及定价active.png" alt="英国市场及定价active" style="height:auto;max-height:65vh;">
+    <div class="caption"><h4>英国市场及定价</h4><p>Shopify 后台开拓英国市场，GBP 货币切换就绪，已激活英国市场。</p></div></div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 6: SUMMARY -->
+<div class="slide section-header" id="sSummary">
+  <div class="sub-section-label">Summary</div>
+  <h1>总结</h1>
+  <p class="subtitle">阶段性结论 · 可交接事项</p>
+</div>
+
+<div class="slide section-content" id="sSummary2">
+  <div class="page-num">— 总结 01 / 02 —</div>
+  <div class="summary-box">
+    <h3>🎯 核心结论</h3>
+    <p>美国站、英国站基础设施已全部就绪，支付结算链路已打通，仅剩前端视觉优化及 GEO/SEO 相关工作待推进。</p>
+    <div class="summary-tags">
+      <span class="tag tag-green">✅ 美国站支付结算</span>
+      <span class="tag tag-green">✅ 英国站支付结算</span>
+      <span class="tag tag-yellow">⏳ 前端视觉优化</span>
+      <span class="tag tag-yellow">⏳ GEO/SEO</span>
+    </div>
+  </div>
+</div>
+
+<div class="slide section-content alt" id="sSummary3">
+  <div class="page-num">— 总结 02 / 02 —</div>
+  <div class="summary-box">
+    <h3>🔗 可交接事项</h3>
+    <p>当前已完成的工作可与推流工作进行交接，具体包含：</p>
+    <div class="dot-list" style="margin-top:16px;">
+      <div class="dot-item"><div class="num">01</div><div class="text">英国站 uk.ouninshop.com 基础设施完整，支付链路已打通，可直接接入流量</div></div>
+      <div class="dot-item"><div class="num">02</div><div class="text">美国站 ouninshop.com 全链路支付就绪，Shopify Headless 架构稳定</div></div>
+      <div class="dot-item"><div class="num">03</div><div class="text">欧美双市场技术基础就绪，GEO/SEO 完成后可承接付费及自然流量</div></div>
+      <div class="dot-item"><div class="num">04</div><div class="text">六月核心任务转移至：英国站本地化（视觉优化）+ GEO/SEO + 美国税号推进</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="slide section-footer" id="sSummary4">
+  <h2>✅ 基建阶段完成，推流阶段启动</h2>
+  <div class="highlight-grid-2">
+    <div class="sec-card"><div class="icon">🌍</div><h4>双站就绪</h4><p>美国站 + 英国站支付链路已通</p></div>
+    <div class="sec-card"><div class="icon">📈</div><h4>推流交接</h4><p>GEO/SEO 完成后启动流量投放</p></div>
   </div>
 </div>
 
