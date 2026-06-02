@@ -35,6 +35,7 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 .tag-green { background: rgba(74,222,128,0.15); color: #4ade80; }
 .tag-yellow { background: rgba(251,191,36,0.15); color: #fbbf24; }
 .tag-purple { background: rgba(192,132,252,0.15); color: #c084fc; }
+.tag-red { background: rgba(248,113,113,0.15); color: #f87171; }
 .section-header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 80px 60px; text-align: center; border-bottom: 3px solid #D4A574; }
 .section-content { padding: 60px; background: #0d1117; }
 .section-content.alt { background: #161b22; }
@@ -53,19 +54,26 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
 .sec-card h4 { font-size: 16px; color: #D4A574; margin-bottom: 8px; }
 .sec-card p { font-size: 13px; color: #888; line-height: 1.6; }
 .highlight-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
+.highlight-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
 .nav-dots { position: fixed; right: 30px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 12px; z-index: 999; }
 .nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(212,165,116,0.3); cursor: pointer; transition: all 0.3s; }
 .nav-dot:hover, .nav-dot.active { background: #D4A574; transform: scale(1.3); }
+.status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.status-done { background: rgba(74,222,128,0.15); color: #4ade80; }
+.status-progress { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.status-blocked { background: rgba(248,113,113,0.15); color: #f87171; }
+.status-todo { background: rgba(148,163,184,0.15); color: #94a3b8; }
 </style>
 </head>
 <body>
 
 <nav class="nav-dots">
   <div class="nav-dot active" title="封面"></div>
-  <div class="nav-dot" title="五月复盘"></div>
-  <div class="nav-dot" title="英国站进展"></div>
-  <div class="nav-dot" title="流量数据"></div>
-  <div class="nav-dot" title="本周计划"></div>
+  <div class="nav-dot" title="五月全月复盘"></div>
+  <div class="nav-dot" title="五月第四周进展"></div>
+  <div class="nav-dot" title="六月第一周计划"></div>
+  <div class="nav-dot" title="英国站本地化"></div>
+  <div class="nav-dot" title="当前阻塞项"></div>
   <div class="nav-dot" title="感谢"></div>
 </nav>
 
@@ -74,164 +82,218 @@ h2 { font-size: 38px; color: #D4A574; margin-bottom: 24px; }
   <div class="logo">OUNIN</div>
   <h1>运营工作完整报告</h1>
   <p class="subtitle">Independent Website Operations Report</p>
-  <p class="date">2026年5月25日</p>
+  <p class="date">2026年6月2日 · 每周二更新</p>
 </div>
 
-<!-- SLIDE 2: MAY REVIEW HEADER -->
+<!-- SLIDE 2: MAY FULL REVIEW -->
 <div class="slide section-header" id="sMay">
-  <div class="sub-section-label">May 2026</div>
-  <h1>五月复盘</h1>
-  <p class="subtitle">重点节点 · 建设性推进中</p>
+  <div class="sub-section-label">May 2026 Full Review</div>
+  <h1>五月全月复盘</h1>
+  <p class="subtitle">重点节点 · 基建收尾 + 流量启动准备</p>
   <div class="desc-box" style="margin-top:30px;">
-    五月的工作重心在于搭建美国站点以及英国站点，均属建设性推进阶段。<br>
-    两大站点基础设施已就绪，为后续流量与转化奠定坚实基础。
+    五月两大核心任务：<br>
+    ① 美国站点全链路打通（支付/物流/Cloudflare/Shopify Headless）<br>
+    ② 英国站点基础设施部署完成（DNS/服务器/Shopify 主体/跳转）<br>
+    两大站点基础已就绪，六月正式进入流量运营阶段。
   </div>
   <div class="tag-row" style="margin-top:24px;">
-    <span class="tag tag-green">🇺🇸 美国站</span>
-    <span class="tag tag-blue">🇬🇧 英国站</span>
+    <span class="tag tag-green">✅ 美国站完成</span>
+    <span class="tag tag-blue">✅ 英国站部署</span>
     <span class="tag tag-yellow">建设推进</span>
-    <span class="tag tag-purple">下一步流量</span>
+    <span class="tag tag-purple">流量准备</span>
   </div>
 </div>
 
 <div class="slide section-content" id="sMay2">
-  <div class="page-num">— 五月重点节点 01 / 02 —</div>
+  <div class="page-num">— 五月全月节点 01 / 03 —</div>
   <div class="dot-list">
-    <div class="dot-item"><div class="num">🇺🇸</div><div class="text">美国站点搭建完成，产品、支付、物流全链路打通</div></div>
-    <div class="dot-item"><div class="num">🛒</div><div class="text">Shopify 美国站 Headless 模式接入，购物车 + Checkout 完整</div></div>
+    <div class="dot-item"><div class="num">🇺🇸</div><div class="text">美国站点全链路打通：产品页/购物车/PayPal/物流全流程</div></div>
+    <div class="dot-item"><div class="num">🛒</div><div class="text">Shopify Storefront API 接入成功，blog 文章动态拉取</div></div>
     <div class="dot-item"><div class="num">💳</div><div class="text">PayPal 支付完成，商品可正常交易</div></div>
     <div class="dot-item"><div class="num">🔒</div><div class="text">Cloudflare 安全配置完成，SSL/TLS 全站加密</div></div>
+    <div class="dot-item"><div class="num">🌐</div><div class="text">Cloudflare Pages CDN 部署，美国站 + 英国站分别托管</div></div>
+    <div class="dot-item"><div class="num">🔍</div><div class="text">Hreflang 标签嵌入全站，欧美市场 SEO 技术基础就绪</div></div>
   </div>
 </div>
 
 <div class="slide section-content alt" id="sMay3">
-  <div class="page-num">— 五月重点节点 02 / 02 —</div>
+  <div class="page-num">— 五月全月节点 02 / 03 —</div>
   <div class="dot-list">
-    <div class="dot-item"><div class="num">🇬🇧</div><div class="text">英国站点独立仓库建立，代码差异化部署</div></div>
-    <div class="dot-item"><div class="num">🌐</div><div class="text">uk.ouninshop.com DNS 配置完成，指向 Cloudflare Pages</div></div>
-    <div class="dot-item"><div class="num">💱</div><div class="text">Shopify 后台开拓英国市场，货币切换 GBP 就绪</div></div>
-    <div class="dot-item"><div class="num">🔍</div><div class="text">Hreflang 标签嵌入，防止谷歌重复内容判定</div></div>
+    <div class="dot-item"><div class="num">🇬🇧</div><div class="text">英国站点独立仓库 ouning-uk 建立，差异化部署</div></div>
+    <div class="dot-item"><div class="num">🌐</div><div class="text">uk.ouninshop.com DNS CNAME 配置完成，指向 Cloudflare Pages</div></div>
+    <div class="dot-item"><div class="num">💱</div><div class="text">Shopify 后台开拓英国市场，GBP 货币切换就绪</div></div>
+    <div class="dot-item"><div class="num">🏢</div><div class="text">Shopify 主体已由任润主体公司注册</div></div>
+    <div class="dot-item"><div class="num">📦</div><div class="text">海外仓部署设置就绪（FBA/海外仓备货准备）</div></div>
   </div>
 </div>
 
-<div class="slide section-footer" id="sMay4">
-  <h2>✅ 建设性推进中</h2>
+<div class="slide section-content" id="sMay4">
+  <div class="page-num">— 五月全月节点 03 / 03 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num">📝</div><div class="text">全站推广语清理：移除所有"100-day trial"和"Free shipping over $135"</div></div>
+    <div class="dot-item"><div class="num">📝</div><div class="text">顶部滚动条换成转化向促销语，导航栏字体改为 Comfortaa</div></div>
+    <div class="dot-item"><div class="num">📝</div><div class="text">会员系统完善：Profile 个人信息/地址管理/修改密码</div></div>
+    <div class="dot-item"><div class="num">📝</div><div class="text">Hero 视频压缩优化：10.1MB → 6.2MB，海报优先 + 后台加载策略</div></div>
+    <div class="dot-item"><div class="num">🍪</div><div class="text">Cookie 弹窗优化：首次访问自动弹出，localStorage 记录不再重复弹</div></div>
+  </div>
+</div>
+
+<div class="slide section-footer" id="sMay5">
+  <h2>✅ 五月基建完成，六月流量启动</h2>
   <div class="highlight-grid">
     <div class="sec-card"><div class="icon">🏗️</div><h4>站点基础</h4><p>美国站 + 英国站基础设施全部就绪</p></div>
-    <div class="sec-card"><div class="icon">🔗</div><h4>全链路</h4><p>支付 + 物流 + Shopify 后端全部打通</p></div>
-    <div class="sec-card"><div class="icon">🌍</div><h4>市场扩张</h4><p>欧美双市场同步推进</p></div>
-    <div class="sec-card"><div class="icon">📈</div><h4>下一步</h4><p>流量获取 + 转化优化</p></div>
+    <div class="sec-card"><div class="icon">🔗</div><h4>支付链路</h4><p>PayPal + Shopify 结算全面打通</p></div>
+    <div class="sec-card"><div class="icon">🌍</div><h4>市场布局</h4><p>欧美双市场同步，SEO 技术基础就绪</p></div>
+    <div class="sec-card"><div class="icon">📈</div><h4>六月目标</h4><p>正式进入流量获取阶段</p></div>
   </div>
-  <p style="margin-top:30px;font-size:14px;color:#555;">五月打基础，六月追流量</p>
 </div>
 
 <div class="separator"></div>
 
-<!-- SLIDE 3: UK SITE UPDATE -->
-<div class="slide section-header" id="sUK">
-  <div class="sub-section-label">May 25 Update</div>
-  <h1>英国站最新进展</h1>
-  <p class="subtitle">网络 · 后台 · 服务器部署 · 跳转 · Shopify结算 · 海外仓</p>
-  <div class="desc-box" style="margin-top:30px;">
-    英国站基础设施全部就绪：网络/后台/服务器部署/跳转/Shopify结算/海外仓部署均已完成。<br>
-    Shopify 主体已由任润主体公司注册，英国市场支付链路全面打通，仅剩前端内容本地化修改。
-  </div>
-  <div class="tag-row" style="margin-top:24px;">
-    <span class="tag tag-green">✅ 服务器部署</span>
-    <span class="tag tag-blue">✅ Shopify结算</span>
-    <span class="tag tag-yellow">✅ 支付链路</span>
-    <span class="tag tag-purple">⏳ 前端本地化</span>
+<!-- SLIDE 3: MAY WEEK 4 PROGRESS -->
+<div class="slide section-header" id="sProgress">
+  <div class="sub-section-label">May Week 4 Progress</div>
+  <h1>五月第四周进展</h1>
+  <p class="subtitle">五月第四周（5/26 - 6/1）完成情况</p>
+</div>
+
+<div class="slide section-content" id="sProgress2">
+  <div class="page-num">— 五月第四周进展 01 / 01 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num">✅</div><div class="text">英国站 uk.ouninshop.com 正式上线</div></div>
+    <div class="dot-item"><div class="num">✅</div><div class="text">英国站 Shopify 后台配置完成，GBP 货币</div></div>
+    <div class="dot-item"><div class="num">✅</div><div class="text">英国站 DNS CNAME 指向 Cloudflare Pages，部署完成</div></div>
+    <div class="dot-item"><div class="num">✅</div><div class="text">ounin-uk 独立 GitHub 仓库建立</div></div>
+    <div class="dot-item"><div class="num">✅</div><div class="text">shopify主体.png / 英国站.png / 云服务器部署.png / 服务器rule部署.png 截图存档</div></div>
+    <div class="dot-item"><div class="num">⏳</div><div class="text">UK站前端本地化（价格/单位/VAT）— 推迟到六月第一周</div></div>
+    <div class="dot-item"><div class="num">⏳</div><div class="text">美国税号申请 — 中介仍在接触中，未签约</div></div>
+    <div class="dot-item"><div class="num">⏳</div><div class="text">ERP 系统完善 — 有框架但产品信息不完整</div></div>
   </div>
 </div>
 
+<div class="slide section-footer" id="sProgress3">
+  <h2>五月收尾，六月开始</h2>
+  <div class="highlight-grid-3">
+    <div class="sec-card"><div class="icon">✅</div><h4>英国站上线</h4><p>uk.ouninshop.com 部署完成并上线</p></div>
+    <div class="sec-card"><div class="icon">⏳</div><h4>本地化待做</h4><p>价格/单位/VAT 本地化六月启动</p></div>
+    <div class="sec-card"><div class="icon">🔴</div><h4>税号阻塞</h4><p>中介未签约，需尽快推进</p></div>
+  </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 4: JUNE WEEK 1 PLAN -->
+<div class="slide section-header" id="sWeekly">
+  <div class="sub-section-label">June Week 1 Plan</div>
+  <h1>六月第一周计划</h1>
+  <p class="subtitle">六月第一周（6/2 - 6/8）重点工作项</p>
+</div>
+
+<div class="slide section-content" id="sWeekly2">
+  <div class="page-num">— 六月第一周计划 01 / 02 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num">🔴</div><div class="text">英国站前端本地化（优先级最高）<br><span style="font-size:13px;color:#888;">价格货币$→£切换 / 温度单位°F→°C / 容量单位本地化 / VAT标注</span></div></div>
+    <div class="dot-item"><div class="num">🔴</div><div class="text">美国税号申请 — 对比至少3家中介，确认合作方，提交材料</div></div>
+    <div class="dot-item"><div class="num">🟡</div><div class="text">UK站运费政策 — 建立英国本地配送规则（标准配送 + 偏远地区附加费）</div></div>
+    <div class="dot-item"><div class="num">🟡</div><div class="text">GEO/SEO — UK站 Meta 信息本地化，Hreflang 确认，Schema Markup 检查</div></div>
+  </div>
+</div>
+
+<div class="slide section-content alt" id="sWeekly3">
+  <div class="page-num">— 六月第一周计划 02 / 02 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num">🟡</div><div class="text">ERP 系统 — 现有产品信息清洗录入，Shopify 库存绑定准备</div></div>
+    <div class="dot-item"><div class="num">🟢</div><div class="text">Shopify UK站支付方式 — 确认 Shopify Payments UK 开通状态</div></div>
+    <div class="dot-item"><div class="num">🟢</div><div class="text">运营报告更新 — 每周二固定更新机制建立</div></div>
+  </div>
+</div>
+
+<div class="slide section-footer" id="sWeekly4">
+  <h2>六月第一周目标</h2>
+  <div class="highlight-grid">
+    <div class="sec-card"><div class="icon">🇬🇧</div><h4>UK站本地化</h4><p>价格/单位/VAT 标注完成</p></div>
+    <div class="sec-card"><div class="icon">💰</div><h4>美国税号</h4><p>确定中介，提交申请材料</p></div>
+    <div class="sec-card"><div class="icon">🔍</div><h4>GEO/SEO</h4><p>Meta本地化，SEO基础完善</p></div>
+    <div class="sec-card"><div class="icon">📦</div><h4>ERP完善</h4><p>产品信息录入，库存绑定准备</p></div>
+  </div>
+  <p style="margin-top:30px;font-size:14px;color:#555;">六月追流量 · 八月迎旺季</p>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 5: UK SITE LOCALIZATION DETAIL -->
+<div class="slide section-header" id="sUK">
+  <div class="sub-section-label">UK Site Localization</div>
+  <h1>英国站本地化</h1>
+  <p class="subtitle">六月核心任务 · UK站前端内容本地化</p>
+</div>
+
 <div class="slide section-content" id="sUK2">
-  <div class="page-num">— 英国站进展 01 / 04 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/服务器rule部署.png" alt="服务器rule部署"><div class="caption"><h4>服务器 Rule 部署</h4><p>英国站网络规则配置完成，服务器部署就绪。</p></div></div>
-    <div class="card"><img src="reports/云服务器部署.png" alt="云服务器部署"><div class="caption"><h4>云服务器部署</h4><p>云端服务器配置完成，海外仓部署设置就绪。</p></div></div>
+  <div class="page-num">— 英国站本地化 01 / 02 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num">💷</div><div class="text">价格货币切换 — 全部产品页显示 £ 价格（需确定定价策略：是否覆盖 VAT 20%）</div></div>
+    <div class="dot-item"><div class="num">🌡️</div><div class="text">温度单位转换 — 所有产品参数/详情页 °F → °C</div></div>
+    <div class="dot-item"><div class="num">📐</div><div class="text">容量/体积单位 — qt/oz/inch → L/g/cm，产品规格表全部本地化</div></div>
+    <div class="dot-item"><div class="num">📦</div><div class="text">运费政策 — 建立 UK 运费表（本土标准配送 + 偏远地区附加费）</div></div>
   </div>
 </div>
 
 <div class="slide section-content alt" id="sUK3">
-  <div class="page-num">— 英国站进展 02 / 04 —</div>
-  <div class="grid-2">
-    <div class="card"><img src="reports/shopify主体.png" alt="Shopify主体"><div class="caption"><h4>Shopify 主体注册</h4><p>Shopify 主体已由任润主体公司注册，英国市场支付链路全面打通。</p></div></div>
-    <div class="card"><img src="reports/英国站.png" alt="英国站"><div class="caption"><h4>英国站部署</h4><p>uk.ouninshop.com 整体部署完成，跳转/结算/海外仓全部就绪。</p></div></div>
-  </div>
-</div>
-
-<div class="separator"></div>
-
-<!-- SLIDE 4: TRAFFIC DATA -->
-<div class="slide section-header" id="sTraffic">
-  <div class="sub-section-label">Traffic Data</div>
-  <h1>流量数据详情</h1>
-  <p class="subtitle">网站访问数据 · 五月第四周</p>
-</div>
-
-<div class="slide section-content" id="sTraffic2">
-  <div class="page-num">— 流量数据详情 01 / 05 —</div>
-  <div class="big-card"><img src="reports/5.25.png" alt="流量数据1" style="max-height:65vh;"><div class="caption"><h4>五月第四周流量数据</h4><p>网站访问、用户行为、转化数据综合分析。</p></div></div>
-</div>
-
-<div class="slide section-content alt" id="sTraffic3">
-  <div class="page-num">— 流量数据详情 02 / 05 —</div>
-  <div class="big-card"><img src="reports/525.1.png" alt="流量数据2" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>用户来源、访问路径、关键指标追踪。</p></div></div>
-</div>
-
-<div class="slide section-content" id="sTraffic4">
-  <div class="page-num">— 流量数据详情 03 / 05 —</div>
-  <div class="big-card"><img src="reports/525.2.png" alt="流量数据3" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>热门页面、搜索关键词、受众分布。</p></div></div>
-</div>
-
-<div class="slide section-content alt" id="sTraffic5">
-  <div class="page-num">— 流量数据详情 04 / 05 —</div>
-  <div class="big-card"><img src="reports/525.3.png" alt="流量数据4" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>转化漏斗、用户留存、流量来源构成。</p></div></div>
-</div>
-
-<div class="slide section-content" id="sTraffic6">
-  <div class="page-num">— 流量数据详情 05 / 05 —</div>
-  <div class="big-card"><img src="reports/525.4.png" alt="流量数据5" style="max-height:65vh;"><div class="caption"><h4>流量数据分析</h4><p>综合数据呈现，为后续优化提供依据。</p></div></div>
-</div>
-
-<div class="separator"></div>
-
-<!-- SLIDE 5: WEEKLY PLAN -->
-<div class="slide section-header" id="sWeekly">
-  <div class="sub-section-label">Weekly Plan</div>
-  <h1>本周计划</h1>
-  <p class="subtitle">六月第一周 · 重点工作项</p>
-</div>
-
-<div class="slide section-content" id="sWeekly2">
-  <div class="page-num">— 本周计划 01 / 01 —</div>
+  <div class="page-num">— 英国站本地化 02 / 02 —</div>
   <div class="dot-list">
-    <div class="dot-item"><div class="num">01</div><div class="text">对接 ERP 接入 — ERP系统完善，产品信息清洗，Shopify 库存绑定</div></div>
-    <div class="dot-item"><div class="num">02</div><div class="text">美国税号申请跟进 — 中介筛选确认，材料准备，推进申请进度</div></div>
-    <div class="dot-item"><div class="num">03</div><div class="text">修改 UK站前端内容 — 价格货币切换£，温度单位°F→°C，容量单位本地化</div></div>
-    <div class="dot-item"><div class="num">04</div><div class="text">GEO/SEO 完善 — UK站 Meta 信息本地化，Hreflang 确认，Schema Markup 检查</div></div>
+    <div class="dot-item"><div class="num">🏷️</div><div class="text">VAT 标注 — 明确标注含 VAT / 不含 VAT，避免价格歧义</div></div>
+    <div class="dot-item"><div class="num">💳</div><div class="text">支付方式 — 确认 Shopify Payments UK / Stripe UK 开通状态</div></div>
+    <div class="dot-item"><div class="num">📞</div><div class="text">联系信息 — Footer 改为英国本地联系方式</div></div>
+    <div class="dot-item"><div class="num">🔍</div><div class="text">Meta 信息 — 每个页面独立设置 title/description/keywords（英文）</div></div>
   </div>
 </div>
 
-<div class="slide section-footer" id="sWeekly3">
-  <h2>本周目标</h2>
-  <div class="highlight-grid">
-    <div class="sec-card"><div class="icon">📦</div><h4>ERP接入</h4><p>产品信息录入完整，库存与 Shopify 同步</p></div>
-    <div class="sec-card"><div class="icon">💰</div><h4>美国税号</h4><p>确定中介，提交申请材料</p></div>
-    <div class="sec-card"><div class="icon">🇬🇧</div><h4>UK站本地化</h4><p>价格/单位/VAT 标注完成</p></div>
-    <div class="sec-card"><div class="icon">🔍</div><h4>GEO/SEO</h4><p>Meta本地化，SEO基础完善</p></div>
+<div class="slide section-footer" id="sUK4">
+  <h2>UK站本地化 — 目标6月8日前完成</h2>
+  <div class="highlight-grid-3">
+    <div class="sec-card"><div class="icon">💷</div><h4>价格本地化</h4><p>£ 价格显示，定价策略确定</p></div>
+    <div class="sec-card"><div class="icon">📐</div><h4>单位转换</h4><p>°F→°C，qt/oz→L/g</p></div>
+    <div class="sec-card"><div class="icon">🏷️</div><h4>VAT标注</h4><p>含VAT/不含VAT明确标注</p></div>
   </div>
-  <p style="margin-top:30px;font-size:14px;color:#555;">六月追流量</p>
 </div>
 
 <div class="separator"></div>
 
-<!-- SLIDE 6: THANKS -->
-<div class="slide thanks-slide" id="s6">
+<!-- SLIDE 6: BLOCKERS -->
+<div class="slide section-header" id="sBlockers">
+  <div class="sub-section-label">Current Blockers</div>
+  <h1>当前阻塞项</h1>
+  <p class="subtitle">需要决策或推进的事项</p>
+</div>
+
+<div class="slide section-content" id="sBlockers2">
+  <div class="page-num">— 当前阻塞项 01 / 01 —</div>
+  <div class="dot-list">
+    <div class="dot-item"><div class="num" style="color:#f87171;">🔴</div><div class="text">UK站定价策略 — £ 价格要不要比 USD 折算略高（覆盖 VAT 20%）？<br><span style="font-size:13px;color:#888;">影响利润率和英国市场竞争力，需尽快决策</span></div></div>
+    <div class="dot-item"><div class="num" style="color:#f87171;">🔴</div><div class="text">美国税号中介 — 中介仍在接触中，价格/资质未确认<br><span style="font-size:13px;color:#888;">需要至少3家比价，$300-$800区间，2-6周时效</span></div></div>
+    <div class="dot-item"><div class="num" style="color:#fbbf24;">🟡</div><div class="text">ERP 系统 — 是否有在用的 ERP？还是从零开始选？<br><span style="font-size:13px;color:#888;">现有框架在用但产品信息不完整，需确认方向</span></div></div>
+    <div class="dot-item"><div class="num" style="color:#fbbf24;">🟡</div><div class="text">红人合作预算 — 每个红人合作预算多少？<br><span style="font-size:13px;color:#888;">计划八月九月开始，需提前规划预算</span></div></div>
+  </div>
+</div>
+
+<div class="slide section-footer" id="sBlockers3">
+  <h2>阻塞项解决路线</h2>
+  <div class="highlight-grid">
+    <div class="sec-card"><div class="icon" style="color:#f87171;">🔴</div><h4>UK定价决策</h4><p>需要确认 £ 定价策略</p></div>
+    <div class="sec-card"><div class="icon" style="color:#f87171;">🔴</div><h4>税号中介</h4><p>需要3家比价并签约</p></div>
+    <div class="sec-card"><div class="icon" style="color:#fbbf24;">🟡</div><h4>ERP方向</h4><p>确认是否已有ERP或从零选</p></div>
+    <div class="sec-card"><div class="icon" style="color:#fbbf24;">🟡</div><h4>红人预算</h4><p>提前规划合作预算</p></div>
+  </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SLIDE 7: THANKS -->
+<div class="slide thanks-slide" id="s7">
   <div class="logo">OUNIN</div>
   <h1>感谢观看</h1>
   <p class="subtitle">Questions & Discussion</p>
-  <p style="margin-top:60px;font-size:16px;color:#555;">ouninshop.com · contact@ouninshop.com</p>
+  <p style="margin-top:60px;font-size:16px;color:#555;">ouninshop.com · uk.ouninshop.com · contact@ouninshop.com</p>
 </div>
 
 <script>
